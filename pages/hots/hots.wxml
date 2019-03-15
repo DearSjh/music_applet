@@ -1,0 +1,18 @@
+ <view class="search bar6">
+    <input placeholder="请输入要查询的歌曲名" bindinput="searchTap"  />
+    <button type="submit"></button>
+</view>
+<view class="list-group" wx:if="{{theEnd}}">
+    <view class="list-group-item list-group-item-info">歌曲查找结果列表</view>
+    <view class="list-group-item" wx:for="{{searchEnd}}"  wx:key="key">
+         <!-- 相当于html的a标签 -->
+         <navigator url="../detail/detail?id={{item.id}}?songName={{item.name}}">
+                <text>{{item.name}} - {{item.singer}}</text>
+         </navigator>
+    </view>
+</view>
+
+
+<view class='mid'>
+
+</view>

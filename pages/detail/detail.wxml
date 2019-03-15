@@ -1,0 +1,25 @@
+<!-- <view class="panel panel-success">
+  <view class="panel-heading">{{songError}}</view>
+  <view class="panel-body">
+    
+  </view>
+</view> -->
+   <view class='body' style="background:url('/image/home.jpg')">
+      <view class='top'>
+         <text class='detail'>{{song.name}}-{{song.singer}}</text>
+       </view>
+      <view class='picdiv'>
+       <image src='{{song.pic}}' class='pic'></image>
+      </view>
+
+   
+     
+
+      <view class="foot">
+        <image src="/image/last.png"></image>
+        <image src="/image/{{playStatu}}" bindtap='stopPlay'></image>
+        <image src="/image/next.png"></image>
+      </view>
+
+
+   </view>

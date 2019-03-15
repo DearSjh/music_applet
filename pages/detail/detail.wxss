@@ -1,0 +1,45 @@
+/* 详情页 */
+.body{
+  /* background-color: #424242; */
+  opacity: 0.9;
+}
+.top{
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  /* margin: 10% auto; */
+  color: white;
+}
+.detail{
+  display: inline-block;
+  margin-top: 20px;
+}
+.picdiv{
+  text-align: center;
+  margin-top: 10%;
+}
+.pic{
+  animation:rotate 15s linear infinite;
+  border-radius: 70%;
+  height: 200px;
+  width: 200px;
+  z-index: 999;
+}
+@keyframes rotate{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+.foot{
+  margin-top: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+image{
+  width:45px;
+  height:45px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+

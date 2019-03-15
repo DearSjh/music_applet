@@ -1,0 +1,5 @@
+{
+  "requiredBackgroundModes": "audio",
+  "usingComponents": {},
+  "navigationBarTitleText": "播放音乐"
+}

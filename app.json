@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/hots/hots",
+    "pages/detail/detail",
+    "pages/loading/loding",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c62f2f",
+    "navigationBarTitleText": "MMuisic",
+    "navigationBarTextStyle":"white"
+  }
+}
