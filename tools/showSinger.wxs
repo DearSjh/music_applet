@@ -1,0 +1,12 @@
+
+ var showSinger = function (x) {
+   var a = x.split("/");
+  //  console.log(a);
+   return a[0];
+
+
+  }
+
+  
+
+module.exports = { showSinger: showSinger };

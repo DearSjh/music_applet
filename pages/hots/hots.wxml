@@ -1,18 +1,63 @@
- <view class="search bar6">
-    <input placeholder="请输入要查询的歌曲名" bindinput="searchTap"  />
-    <button type="submit"></button>
-</view>
-<view class="list-group" wx:if="{{theEnd}}">
-    <view class="list-group-item list-group-item-info">歌曲查找结果列表</view>
+ <view style='background-color:#fafafa'>
+ <!-- <view class="search bar6">
+    <input placeholder="歌曲名" bindinput="searchTap"  />
+    <navigator class='songSearchaa' url="../searchResult/searchResult?keywords={{keywords}}">
+      <image src='/image/songSearch.png' class='songSearch'></image>
+    </navigator>
+</view> -->
+ <view class="search">
+      <input type="text" id="in" placeholder="歌曲名" bindinput="searchTap" />
+      <image src='/image/songSearch.png' class='songSearch' bindtap='searchResult'></image>
+ </view>
+ <!-- 引入外部js文件 -->
+<wxs src="../../tools/showSinger.wxs" module="tools" />
+<view class="list-group" wx:if="{{theEnd}}" style='position:absolute;margin-left:2%'>
+    <view class="list-group-item list-group-item-info searchList" style='color:#0078ff'>歌曲查找结果列表</view>
     <view class="list-group-item" wx:for="{{searchEnd}}"  wx:key="key">
          <!-- 相当于html的a标签 -->
-         <navigator url="../detail/detail?id={{item.id}}?songName={{item.name}}">
-                <text>{{item.name}} - {{item.singer}}</text>
+         <image src='/image/search.png' class='searchPng'></image>
+         <navigator class='searchList' url="../detail/detail?id={{item.id}}&songName={{item.name}}">
+                <text>{{item.name}} - {{tools.showSinger(item.singer)}}</text>
          </navigator>
     </view>
 </view>
 
+<!-- 轮播图部分 -->
+<swiper wx:if="{{theEnd2}}"
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular=true
+>
+  <block wx:for="{{imgUrls}}" wx:key="key">
+    <swiper-item class="slide-border">
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
 
 <view class='mid'>
+    <view class='midintroduce'>
+      <text>推荐歌单</text>
+    </view>
 
+    <view  class="mybox">
+      <!-- 小的div -->
+      <view class='xiaobox' wx:for="{{hotList}}" wx:key="key">
+          <image src='{{item.coverImgUrl}}'></image>
+          <text>{{item.title}}</text>
+      </view>
+    </view>
+</view>
+
+<!-- 底部控件 -->
+ <view class="foot">
+          <navigator url="../detail/detail" class='detail1'>
+              <image src="/image/detail.png" class='detail2'></image>
+          </navigator>
+          <image src="/image/last.png"  bindtap='lastSong'></image>
+          <image src="/image/play.png" bindtap='stopPlay'></image>
+          <image src="/image/next.png" bindtap='nextSong'></image>
+      </view>
 </view>

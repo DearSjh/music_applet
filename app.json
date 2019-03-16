@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/hots/hots",
+    "pages/searchResult/searchResult",
     "pages/detail/detail",
     "pages/loading/loding",
     "pages/index/index",
@@ -9,7 +10,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#c62f2f",
-    "navigationBarTitleText": "MMuisic",
+    "navigationBarTitleText": "猫仔音乐",
     "navigationBarTextStyle":"white"
   }
 }

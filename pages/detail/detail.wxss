@@ -2,6 +2,14 @@
 .body{
   /* background-color: #424242; */
   opacity: 0.9;
+   background: linear-gradient(to bottom right, gray , rgb(92, 88, 88) 40%,gray);
+   /* background-size: cover; */
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content:space-between;
+   flex-wrap: nowrap;
+   flex-direction: column;
 }
 .top{
   text-align: center;
@@ -19,7 +27,7 @@
   margin-top: 10%;
 }
 .pic{
-  animation:rotate 15s linear infinite;
+  animation:rotate 21s linear infinite;
   border-radius: 70%;
   height: 200px;
   width: 200px;
@@ -31,10 +39,33 @@
 }
 
 .foot{
-  margin-top: 200px;
+  /* margin-bottom: 0px; */
+  margin-top: 160px;
   text-align: center;
   padding: 10px;
 }
+
+.process{
+  /* height: 50px; */
+  width: 100%;
+  margin-top: 50px;
+  /* margin-left: 10%; */
+  /* margin-right: 10%; */
+  /* margin: o auto; */
+  font-size:14px;
+  line-height: 7px; 
+  display: flex;
+  justify-content: center;
+  flex-direction: rwo;
+  flex-wrap: nowrap;
+}
+.process text{
+  width:5%;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 
 image{
   width:45px;

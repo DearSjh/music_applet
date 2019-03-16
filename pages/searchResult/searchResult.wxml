@@ -1,0 +1,15 @@
+<view>
+
+ <!-- page/index/index.wxml -->
+ 
+<wxs src="../../tools/showSinger.wxs" module="tools" />
+  <view class="list-group-item list-group-item-info searchList" style='color:#0078ff'>搜索结果</view>
+  <view wx:for="{{songList}}"  wx:key="key">
+    <navigator class='searchList' url="../detail/detail?id={{item.id}}&songName={{item.name}}">
+                <text>{{item.name}} - {{tools.showSinger(item.singer)}}</text>
+    </navigator>
+  
+  </view>
+
+
+</view>

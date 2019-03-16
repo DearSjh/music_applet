@@ -1,46 +1,132 @@
-.search {
-	padding:0px 0px;
-  margin:0px auto;
+.search #in{
+    float: left;
+    width:86%;
+    margin-left: 20px;
+    height:40px;
+    border:0px solid red;
+    margin: 5px;
+    outline:none;
+    font:14px/30px "microsoft yahei";
+    padding-left: 10px;
+}
+.search .btn_search{
+    background:red;
+    /* width:19%; */
+    height:30px;
+    color:white;
+    border:none;
+    outline:none;
+    font:14px/34px "microsoft yahei";
 }
 
-input,button {
-	border:none;
-	outline:none;
+.songSearch{
+  width: 25px;height: 25px;
+  margin-top: 3%;
 }
-input {
-	width:100%;
-	height:35px;
-	padding-left:13px;
+
+.list-group{
+  /* overflow:hidden; */
+  border-left: 1px solid darkgray;
+  border-right: 1px solid darkgray;
+  width: 96%;
+  margin: 5px auto;
+  box-shadow: 0px 0px 5px darkgray;
+  /* text-align: center; */
 }
-button {
-	height:35px;
-	width:42px;
-	position:absolute;
+.searchPng{
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-top: 2%;
 }
-.bar6 input {
-	border:1px solid #d80000;
-	/* border-radius:5px; */
-	background:transparent;
-	top:0;
-	right:0;
+.searchList{
+  background-color: #f5f5f5;
+  display: block;
+  height: 26px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 26px;
+  border-top: 1px solid darkgray;
+  /* overflow:hidden; */
 }
-.bar6 button {
-	background:#d80000;
-	border-radius:0 0px 0px 0;
-	width:60px;
-	top:1px;
-	right:0;
+
+.foot{
+  /* margin-top: 200px; */
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
-.bar6 button:before {
-	content:"Search";
-  margin-left: -5px;
+/* .foot .detail{
+ margin-left: 10px;
+} */
+.foot navigator{
+  width:35px;
+  height:35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.foot image{
+  width:35px;
+  height:35px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.slide-image{
+  width: 100%;
+}
+
+.slide-border{
+  margin-left:3%;
+  margin: 0 auto;
+  width:100%;
+  border-radius: 8px;
+  height:320px;
   margin-top: 0px;
-	font-size:14px;
-	color:#F9F0DA;
 }
-
 .mid{
   width: 100%;
+  border-top: 1px solid gray;
+  margin-top: 18px;
+}
+
+.midintroduce{
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.mid .mybox{
+  width: 100%;
+  /* border: 1px solid blue; */
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ justify-content: center;
+}
+.mid .xiaobox{
+  /* border: 1px red solid; */
+  padding: 1px;
+  width: 100px;
+  height: 130px;
+  line-height: 11px;
+  margin: 8px;
+}
+.mid .xiaobox image{
+  width: 100px;
   height: 100px;
-  border: 1px solid blue;
+}
+
+.mid .xiaobox text{
+  /* margin-top: 10px; */
+  font-size: 10px;
+  height: 25px;
 }
