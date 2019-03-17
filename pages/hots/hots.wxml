@@ -12,7 +12,7 @@
  <!-- 引入外部js文件 -->
 <wxs src="../../tools/showSinger.wxs" module="tools" />
 <view class="list-group" wx:if="{{theEnd}}" style='position:absolute;margin-left:2%'>
-    <view class="list-group-item list-group-item-info searchList" style='color:#0078ff'>歌曲查找结果列表</view>
+    <view class="list-group-item-info searchList" style='color:#0078ff'>歌曲查找结果列表</view>
     <view class="list-group-item" wx:for="{{searchEnd}}"  wx:key="key">
          <!-- 相当于html的a标签 -->
          <image src='/image/search.png' class='searchPng'></image>
@@ -30,7 +30,7 @@
   duration="{{duration}}"
   circular=true
 >
-  <block wx:for="{{imgUrls}}" wx:key="key">
+  <block wx:for="{{imgUrls}}">
     <swiper-item class="slide-border">
       <image src="{{item}}" class="slide-image"/>
     </swiper-item>
@@ -44,7 +44,7 @@
 
     <view  class="mybox">
       <!-- 小的div -->
-      <view class='xiaobox' wx:for="{{hotList}}" wx:key="key">
+      <view class='xiaobox' wx:for="{{hotList}}" key="key">
           <image src='{{item.coverImgUrl}}'></image>
           <text>{{item.title}}</text>
       </view>

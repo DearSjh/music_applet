@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
-	"appid": "wx44767f6b29ee96b6",
+	"appid": "wx7867a90c2d18958a",
 	"projectname": "mymusic",
 	"debugOptions": {
 		"hidedInDevtools": []

@@ -27,6 +27,14 @@ Page({
       method: 'start'
     }
   },
+  //选择播放进度
+  sliderChange:function(e){
+    // console.log(e.detail.value);
+    const now = wx.getBackgroundAudioManager();
+    var nowPlay = e.detail.value/100*now.duration;
+    
+    now.seek(nowPlay);
+  },
   lastSong: function () {
     var i = Math.floor((Math.random() * this.data.songList.length));
     this.setData({
@@ -109,7 +117,7 @@ Page({
                       url: 'https://api.bzqll.com/music/netease/search?key=579621905&type=song&limit=100&offset=0&s=' + that.data.song.name,
                       success: res => {
                         // console.log(res.data.code);
-                        console.log(res.data);
+                        // console.log(res.data);
                         if (res.data.code == 200) {
                           let searchEnd = res.data.data;
                           // console.log(options.songName);
@@ -118,7 +126,7 @@ Page({
                           })
                           // console.log(this.data.songList[0]);
                         } else {
-                          taht.setData({
+                          that.setData({
                             songList: [],
                           })
                         }
@@ -190,7 +198,8 @@ Page({
           back.onTimeUpdate(function(){
             const back = wx.getBackgroundAudioManager();
               var currentTime =back.currentTime;
-              var percent =Math.floor(100*currentTime/that.data.song.time);
+            var duration = back.duration;
+            var percent = Math.floor(100 * currentTime / duration);
               // if(percent!=that.data.percent){
               //   that.setData({
               //     currentTime: Math.floor(currentTime),
@@ -236,9 +245,9 @@ Page({
       }
 
     })
-
+    // console.log (options.songName);
     wx.request({
-      url: 'https://api.bzqll.com/music/netease/search?key=579621905&type=song&limit=100&offset=0&s=' + options.songName,
+      url:'https://api.bzqll.com/music/netease/search?key=579621905&type=song&limit=100&offset=0&s='+options.songName,
       success: res => {
         // console.log(res.data.code);
         // console.log(res.data);
@@ -248,7 +257,7 @@ Page({
           this.setData({
             songList: res.data.data,
           })
-          // console.log(this.data.songList[0]);
+          // console.log(this.data.songList);
         } else {
           this.setData({
             songList: [],

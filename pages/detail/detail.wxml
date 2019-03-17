@@ -19,8 +19,11 @@
      <view class='process'>
        <text>{{currentTime}}</text>
        <view style='width:77%;margin:0px auto;display:inline-block'>
-          <progress percent="{{percent}}" color='red' backgroundColor='white' stroke-width="3px;" style='border-radio:5px;'/>
+           <slider  value="{{percent}}" activeColor='red' backgroundColor='white' bindchange="sliderChange" step="0.1" block-color='white' block-size='12px'/>
        </view>
+       <!-- <view style='width:77%;margin:0px auto;display:inline-block'>
+          <progress percent="{{percent}}" color='red' backgroundColor='white' stroke-width="3px;" style='border-radio:5px;'/>
+       </view> -->
        <text>{{song.time}}</text>
      </view>
 
